@@ -28,11 +28,11 @@ namespace Labsheet_1
 
             //Create Bands//
             RockBand b1 = new RockBand("Arctic Monkys", 2002, "Alex Turner, Jamie Cook, Matt Melders, Nick O'Malley");
-            Band b2 = new Band("Tame Implala", 2007, "Kevin Parker, Jay Watson, Dominic Simper, Cam Avery, ");
-            Band b3 = new Band("Vampire Weekend", 2002, "Alex Turner, Jamie Cook, Matt Melders, Nick Allbrook, Nick O'Malley");
-            Band b4 = new Band("Peace", 2009, "Harrison Koisser, Samuel Koisser, Dominic Boyce, Douglas Castle");
-            Band b5 = new Band("Rex Orange County", 2016, "Alex O'Connor");
-            Band b6 = new Band("Mac Demarco", 2012, "Mac Demarco");
+            IndieBand b2 = new IndieBand("Tame Implala", 2007, "Kevin Parker, Jay Watson, Dominic Simper, Cam Avery, ");
+            IndieBand b3 = new IndieBand("Vampire Weekend", 2002, "Alex Turner, Jamie Cook, Matt Melders, Nick Allbrook, Nick O'Malley");
+            RockBand b4 = new RockBand("Peace", 2009, "Harrison Koisser, Samuel Koisser, Dominic Boyce, Douglas Castle");
+            PopBand b5 = new PopBand("Rex Orange County", 2016, "Alex O'Connor");
+            IndieBand b6 = new IndieBand("Mac Demarco", 2012, "Mac Demarco");
 
             //Insert Bands into list//
             allBands.Add(b1);
@@ -44,6 +44,9 @@ namespace Labsheet_1
 
             //Sort Bands//
             allBands.Sort();
+
+            //Display
+           lbxBandInfo.ItemsSource = allBands;
 
 
 

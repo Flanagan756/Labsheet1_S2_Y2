@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Bands" HorizontalAlignment="Left" Margin="24,13,0,0" VerticalAlignment="Top" Height="40" Width="106" FontSize="25"/>
-        <ListBox x:Name="allBandsList" HorizontalAlignment="Left" Height="244" Margin="24,103,0,0" VerticalAlignment="Top" Width="179" SelectionChanged="ListBox_SelectionChanged" FontSize="20"/>
+        <ListBox x:Name="lbxBandInfo" HorizontalAlignment="Left" Height="244" Margin="24,103,0,0" VerticalAlignment="Top" Width="179"/>
         <Label Content="Genre" HorizontalAlignment="Left" Margin="24,67,0,0" VerticalAlignment="Top" Width="54"/>
         <ComboBox HorizontalAlignment="Left" Margin="78,71,0,0" VerticalAlignment="Top" Width="125"/>
         <Label Content="Band Infomation" HorizontalAlignment="Left" Margin="353,21,0,0" VerticalAlignment="Top" FontSize="25"/>
