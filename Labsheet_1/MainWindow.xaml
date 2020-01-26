@@ -8,12 +8,19 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Bands" HorizontalAlignment="Left" Margin="24,13,0,0" VerticalAlignment="Top" Height="40" Width="106" FontSize="25"/>
-        <ListBox x:Name="lbxBandInfo" HorizontalAlignment="Left" Height="244" Margin="24,103,0,0" VerticalAlignment="Top" Width="179"/>
+        <ListBox x:Name="lbxBandInfo" HorizontalAlignment="Left" Height="244" Margin="24,103,0,0" VerticalAlignment="Top" Width="179" SelectionChanged="ListBox_SelectionChanged"/>
         <Label Content="Genre" HorizontalAlignment="Left" Margin="24,67,0,0" VerticalAlignment="Top" Width="54"/>
-        <ComboBox HorizontalAlignment="Left" Margin="78,71,0,0" VerticalAlignment="Top" Width="125"/>
+        <ComboBox HorizontalAlignment="Left" Margin="78,71,0,0" VerticalAlignment="Top" Width="125">
+            <ComboBoxItem Tag="Rock" Selected="ComboBoxItem_Selected1">Rock</ComboBoxItem>
+            <ComboBoxItem Tag="Indie" Selected="ComboBoxItem_Selected2">Indie</ComboBoxItem>
+            <ComboBoxItem Tag="Pop" Selected="ComboBoxItem_Selected3">Pop</ComboBoxItem>
+        </ComboBox>
+
         <Label Content="Band Infomation" HorizontalAlignment="Left" Margin="353,21,0,0" VerticalAlignment="Top" FontSize="25"/>
         <Label Content="Albums" HorizontalAlignment="Left" Margin="353,154,0,0" VerticalAlignment="Top" Width="98" FontSize="25"/>
         <ListBox HorizontalAlignment="Left" Height="130" Margin="353,217,0,0" VerticalAlignment="Top" Width="201"/>
+        <TextBlock x:Name="txtBandFormation" HorizontalAlignment="Left" Margin="353,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="364"/>
+        <TextBlock x:Name="txtBandMemebrs" HorizontalAlignment="Left" Margin="353,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="39" Width="364"/>
 
     </Grid>
 </Window>

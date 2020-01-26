@@ -20,11 +20,17 @@ namespace Labsheet_1
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Band> allBands = new List<Band>();
+        List<Band> allRockBands = new List<Band>();
+        List<Band> allIndieBands = new List<Band>();
+        List<Band> allPopBands = new List<Band>();
+        List<Band> selectedBand = new List<Band>();
+
         public MainWindow()
         {
             InitializeComponent();
 
-            List<Band> allBands = new List<Band>();
+
 
             //Create Bands//
             RockBand b1 = new RockBand("Arctic Monkys", 2002, "Alex Turner, Jamie Cook, Matt Melders, Nick O'Malley");
@@ -42,16 +48,61 @@ namespace Labsheet_1
             allBands.Add(b5);
             allBands.Add(b6);
 
+
+            /*Ask Keith how to replace with a foreach loop*/
+
+            allRockBands.Add(b1);
+            allRockBands.Add(b4);
+
+            allIndieBands.Add(b2);
+            allIndieBands.Add(b3);
+            allIndieBands.Add(b6);
+
+
+            allPopBands.Add(b5);
+        
             //Sort Bands//
             allBands.Sort();
 
-            //Display
+           //Display
            lbxBandInfo.ItemsSource = allBands;
 
+        }
+            private void ComboBoxItem_Selected1(object sender, RoutedEventArgs e)
+        {
 
-
+            lbxBandInfo.ItemsSource = null;
+            lbxBandInfo.ItemsSource = allRockBands;
         }
 
+        private void ComboBoxItem_Selected2(object sender, RoutedEventArgs e)
+        {
+            lbxBandInfo.ItemsSource = null;
+            lbxBandInfo.ItemsSource = allIndieBands;
+        }
 
+        private void ComboBoxItem_Selected3(object sender, RoutedEventArgs e)
+        {
+            lbxBandInfo.ItemsSource = null;
+            lbxBandInfo.ItemsSource = allPopBands;
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Get the currently selected item in the ListBox.
+            Band selectedBand = lbxBandInfo.SelectedItem as Band;
+
+            if (selectedBand != null)    //Checks if something is selected
+            {
+                //Display activity in text box
+                txtBandFormation.Text = ("Formed : " + selectedBand.YearFormed.ToString());
+
+                //Display band memebers in text box
+                txtBandMemebrs.Text = ("Members : " + selectedBand.Members.ToString());
+
+
+            }
+
+        }
     }
 }
