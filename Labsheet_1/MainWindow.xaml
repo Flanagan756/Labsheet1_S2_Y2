@@ -18,7 +18,7 @@
 
         <Label Content="Band Infomation" HorizontalAlignment="Left" Margin="353,21,0,0" VerticalAlignment="Top" FontSize="25"/>
         <Label Content="Albums" HorizontalAlignment="Left" Margin="353,154,0,0" VerticalAlignment="Top" Width="98" FontSize="25"/>
-        <ListBox HorizontalAlignment="Left" Height="130" Margin="353,217,0,0" VerticalAlignment="Top" Width="201"/>
+        <ListBox x:Name="lbxAlbums" HorizontalAlignment="Left" Height="130" Margin="353,217,0,0" VerticalAlignment="Top" Width="201"/>
         <TextBlock x:Name="txtBandFormation" HorizontalAlignment="Left" Margin="353,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22" Width="364"/>
         <TextBlock x:Name="txtBandMemebrs" HorizontalAlignment="Left" Margin="353,93,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="39" Width="364"/>
 
